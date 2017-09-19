@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <link href="./styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <form name="drinkorder" action="#" method="get">
+            <p>Drink Type:<br>
+                <input type="radio" name="drink" value="americano">Americano<br>
+                <input type="radio" name="drink" value="cuppuccino">Cuppuccino<br>
+                <input type="radio" name="drink" value="latte">Latte<br>
+                <input type="radio" name="drink" value="macchiato">Macchiato<br>
+                <input type="radio" name="drink" value="mocha">Mocha<br>
+            </p>
+            <p>Size:<br>
+                <select name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </p>    
+            <p>Flavors and Extras:<br>
+                <input type="checkbox" name="shot" value="espresso">Extra Espresso Shot<br>
+                <input type="checkbox" name="shot" value="caramel">Caramel Shot<br>
+                <input type="checkbox" name="shot" value="hazelnut">Hazelnut Shot<br>
+                <input type="checkbox" name="shot" value="vanilla">Vanilla Shot<br>
+            </p> 
+            <p>Order For (name):<input type="text" name="name"></p>
+            <p><input type="submit" value="Order!" class="order"></p>
+        </form>
+    </body>
+</html>
