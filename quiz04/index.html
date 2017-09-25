@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz04</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <form name="favoriteAnimal" id="favAnimal" action="#" method="get">
+          <p>Favorite Animal:<input type="text" name="favAnimal" id="fa"></p>
+          <input type="button" name="submit" id="submit" value="Submit!" onclick="showValues()">
+      </form>
+    
+    <script>
+        function showValues() {
+            var favoriteAnimal;
+            
+            favAnimal = document.getElementById("fa").value;
+        alert(favAnimal);
+        }
+    </script>
+  </body>
+</html>
