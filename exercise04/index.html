@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 4</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function story(){
+                var name = document.tellstory.name.value;
+                var number = document.tellstory.number.value;
+                var color = document.tellstory.color.value;
+                var animal = document.tellstory.animal.value;
+                name = name.trim();
+                number = number.trim();
+                document.getElementById("words").innerHTML = 
+                " Hello, my name is " + name + " ! I have " + number + " wonderful " + color + " " + animal + "!";
+            }
+        </script>
+        <form name="tellstory" id="tellstory" action="#" method="get">
+            <p>Name:<input type="text" name="name" id="name"></p>
+            <p>Number:<input type="number" name="number" id="number"></p>
+            <p>Color:<br>
+                <input type="radio" name="color" value="black">Black<br>
+                <input type="radio" name="color" value="black">Brown<br>
+                <input type="radio" name="color" value="black">Orange<br>
+            </p>
+            <p>Animal (plural):<br>
+                <select name="animal">
+                <option value="cats">Cats</option>
+                <option value="dogs">Dogs</option>
+                <option value="fish">Fish</option>
+                <option value="hamster">Hamsters</option>
+                </select></p>
+           <p><input type="button" value="Tell Story!" onclick="story();"></p>
+            <hr>
+        </form>
+        <p id="words"></p>
+    </body>
+</html>
