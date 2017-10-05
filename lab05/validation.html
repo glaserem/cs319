@@ -3,9 +3,7 @@
     <head>
         <title>Lab 5</title>
         <meta charset="utf-8">
-    </head>
-    <body>
-        <script>
+         <script>
             function formValidate(){
                 var firstName = document.txtInput.firstName.value;
                 var lastName = document.txtInput.lastName.value;
@@ -31,6 +29,8 @@
                 }
             }
         </script>
+    </head>
+    <body>
         <form name="txtInput" id="txtInput" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return formValidate();">
             <p>First Name:<input type="text" name="firstName" id="firstName"></p>
             <p>Last Name:<input type="text" name="lastName" id="lastName"></p>
