@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 6</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function guessthenumber(){
+                var mynumber;
+                var guess;
+                
+                mynumber = 4;
+                guess = document.numbergame.number.value;
+                
+                guess = guess.trim();
+                
+                if (guess == "") {
+                    alert("Please enter a number.");
+                    document.numbergame.number.focus();
+                    return false;
+                } else if (isNaN(guess) == true){
+                    alert("Please enter a number.");
+                    document.numbergame.number.select();
+                    return false;
+                } else if ((guess < 1) || (guess > 10)){
+                    alert("Please enter a number greater than 1 and less than 10.");
+                    document.numbergame.number.select();
+                    return false;
+                } else if (guess > 4){
+                    alert("Guess a lower number.");
+                    return false;
+                } else if (guess < 4){
+                    alert("Guess a higher number.");
+                    return false;
+                } else if (guess == 4){
+                    alert("You guessed correct!");
+                    return true;
+                }
+            }
+                
+        </script>
+        <form name="numbergame" id="numbergame" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return guessthenumber();">
+            <h1>Guess the Number!</h1>
+            <p>Guess:<br>
+                <input type="text" name="number" id="number"></p>
+            <p><input type="submit" name="submit" id="submit" value="Submit" onclick= "return guessthenumber();"></p>
+        </form>
+    </body>
+</html>
