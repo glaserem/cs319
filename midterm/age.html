@@ -6,9 +6,21 @@
     </head>
     <body>
         <script>
-            
+            function validateAge(){
+                var age = document.checkAge.age.value;
+                
+                age = age.trim();
+                
+                if (age == "") {
+                    alert("Please enter your age.");
+                    document.checkAge.age.focus();
+                    return false;
+                } else {
+                    return true;
+                }
+            }
         </script>
-        <form name="checkAge" id="checkAge" action="#" method="get">
+        <form name="checkAge" id="checkAge" action="#" method="get" onsubmit="return validateAge();">
             <p>How old are you?<br>
             <input type="text" name="age" id="age"></p>
             <p><input type="submit" name="submit=" id="submit" value="Submit"></p>
